@@ -1,0 +1,10 @@
+{
+    "id": ,
+    "name": "Toronto",
+    "state": "Ontario",
+    "country": "CA",
+    "coord": {
+        "lon": 79.3832° W,
+        "lat": 43.6532° N
+    }
+},
