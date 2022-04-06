@@ -6,7 +6,7 @@ String forecastWeather = "forecast?";
 String id = "id=";
 String TorontoID = "6167865";
 String VancouverID = "6173331";
-String LondonID = "1006984";
+String LondonID = "2643743";
 String apiKey = "APPID=9f7b8108e7aa1be51da4d0de6d012171";
 String and = "&";
 String mode = "mode=json";
@@ -19,15 +19,15 @@ String URLForecastToronto = baseURL+folder+weatherFolder+forecastWeather+id+Toro
 String URLCurrentVancouver = baseURL+folder+weatherFolder+currentWeather+id+VancouverID+and+apiKey+and+mode+and+unitMetic;
 String URLForecastVancouver = baseURL+folder+weatherFolder+forecastWeather+id+VancouverID+and+apiKey+and+mode+and+unitMetic;
 String URLCurrentLondon = baseURL+folder+weatherFolder+currentWeather+id+LondonID+and+apiKey+and+mode+and+unitMetic;
-String URLForecasLlondon = baseURL+folder+weatherFolder+forecastWeather+id+londonID+and+apiKey+and+mode+and+unitMetic;
+String URLForecasLondon = baseURL+folder+weatherFolder+forecastWeather+id+londonID+and+apiKey+and+mode+and+unitMetic;
 
 //Progress of Concatenation & Verification
 println("Current Toronto", URLCurrentToronto);
 println("Forecast Toronto", URLForecastToronto);
 println("Current Vancouver", URLCurrentVancouver);
 println("Forecast Vancouver", URLForecastVancouver);
-println("Current london", URLCurrentlondon);
-println("Forecast london", URLForecastlondon);
+println("Current London", URLCurrentLondon);
+println("Forecast London", URLForecastLondon);
 //
 //
 JSONObject jsonCurrentToronto = loadJSONObject(URLCurrentToronto);
