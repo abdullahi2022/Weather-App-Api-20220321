@@ -8,7 +8,7 @@ String rain = "10";
 String thunderstorm = "11";
 String snow = "13";
 String mist = "50";
-String daytime = "d"; //API Key is PRIVATE so not included here
+String daytime = "d";9f7b8108e7aa1be51da4d0de6d012171
 String knighttime = "n";
 String fileExtensionPNG = ".png";
 //

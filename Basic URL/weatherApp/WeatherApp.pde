@@ -19,7 +19,7 @@ String URLForecastToronto = baseURL+folder+weatherFolder+forecastWeather+id+Toro
 String URLCurrentVancouver = baseURL+folder+weatherFolder+currentWeather+id+VancouverID+and+apiKey+and+mode+and+unitMetic;
 String URLForecastVancouver = baseURL+folder+weatherFolder+forecastWeather+id+VancouverID+and+apiKey+and+mode+and+unitMetic;
 String URLCurrentLondon = baseURL+folder+weatherFolder+currentWeather+id+LondonID+and+apiKey+and+mode+and+unitMetic;
-String URLForecasLondon = baseURL+folder+weatherFolder+forecastWeather+id+londonID+and+apiKey+and+mode+and+unitMetic;
+String URLForecasLondon = baseURL+folder+weatherFolder+forecastWeather+id+LondonID+and+apiKey+and+mode+and+unitMetic;
 
 //Progress of Concatenation & Verification
 println("Current Toronto", URLCurrentToronto);
