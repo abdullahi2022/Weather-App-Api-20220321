@@ -42,9 +42,8 @@ void buildingURL() {
   //println("Forecast Vancouver", URLForecastVancouver);
   //println("Current London", URLCurrentLondon);
   //println("Forecast London", URLForecastLondon);
-  //
 }//End buildingURL
-//
+
 void APICall() {
   jsonCurrentToronto = loadJSONObject(URLCurrentToronto);
   jsonForecastToronto = loadJSONObject(URLForecastToronto);
@@ -52,7 +51,6 @@ void APICall() {
   jsonForecastVancouver = loadJSONObject(URLForecastVancouver);
   jsonCurrentLondon = loadJSONObject(URLCurrentLondon);
   jsonForecastLondon = loadJSONObject(URLForecastLondon);
-  //Verification in Console, copy-paste variable output to Chrome and verifiy data
-  //println("JSON Current Alberta", jsonCurrentAlberta);
-  //Complete the Rest
 }//End APICall
+
+//Loading JSONObjects with Website API Data
