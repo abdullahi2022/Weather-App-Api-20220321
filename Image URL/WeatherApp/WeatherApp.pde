@@ -8,7 +8,7 @@ String rain = "10";
 String thunderstorm = "11";
 String snow = "13";
 String mist = "50";
-String daytime = "d";9f7b8108e7aa1be51da4d0de6d012171
+String daytime = "d";
 String knighttime = "n";
 String fileExtensionPNG = ".png";
 //

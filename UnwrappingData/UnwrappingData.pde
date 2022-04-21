@@ -3,7 +3,6 @@
 void setup()
 {
   buildingURL();
-  APIcall() ;
 }//End setup
 //
 void draw()
