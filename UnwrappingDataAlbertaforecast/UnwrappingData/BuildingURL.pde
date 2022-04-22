@@ -1,70 +1,58 @@
-//Global Variables
-String URLCurrentAlberta;
-String URLForecastAlberta;
-String URLCurrentEdmonton;
-String URLForecastEdmonton;
-String URLCurrentCalgary;
-String URLForecastCalgary;
-String URLCurrentRedDeer;
-String URLForecastRedDeer;
+//global variables
+String URLCurrentToronto;
+String URLForecastToronto;
+String URLCurrentVancouver;
+String URLForecastVancouver;
+String URLCurrentLondon;
+String URLForecastLondon;
 //
-JSONObject jsonCurrentAlberta;
-JSONObject jsonForecastAlberta;
-JSONObject jsonCurrentEdmonton;
-JSONObject jsonForecastEdmonton;
-JSONObject jsonCurrentCalgary;
-JSONObject jsonForecastCalgary;
-JSONObject jsonCurrentRedDeer;
-JSONObject jsonForecastRedDeer;
+JSONObject jsonCurrentToronto;
+JSONObject jsonForecastToronto;
+JSONObject jsonCurrentVancouver;
+JSONObject jsonForecastVancouver;
+JSONObject jsonCurrentLondon;
+JSONObject jsonForecastLondon;
 //
 void buildingURL() {
-  String baseURL = "http://api.openweathermap.org";
-  String folder = "/";
-  String weatherFolder = "data/2.5/";
-  String currentWeather = "weather?";
-  String forecastWeather = "forecast?";
-  String id = "id=";
-  String albertaID = "5883102";
-  String EdmontonID = "5946768";
-  String redDeerID = "6118158";
-  String calgaryID = "5913490";
-  String apiKey = "APPID=06ee4dfaf9a7c9bdf9024604eda99160"; //API Key is PRIVATE so not included here
-  String and = "&";
-  String mode = "mode=json";
-  String unitMetic = "units=metric"; //Kelvin, Metric, or Imperial
-  //
-  URLCurrentAlberta = baseURL+folder+weatherFolder+currentWeather+id+albertaID+and+apiKey+and+mode+and+unitMetic;
-  URLForecastAlberta = baseURL+folder+weatherFolder+forecastWeather+id+albertaID+and+apiKey+and+mode+and+unitMetic;
-  URLCurrentEdmonton = baseURL+folder+weatherFolder+currentWeather+id+EdmontonID+and+apiKey+and+mode+and+unitMetic;
-  URLForecastEdmonton = baseURL+folder+weatherFolder+forecastWeather+id+EdmontonID+and+apiKey+and+mode+and+unitMetic;
-  URLCurrentCalgary = baseURL+folder+weatherFolder+currentWeather+id+calgaryID+and+apiKey+and+mode+and+unitMetic;
-  URLForecastCalgary = baseURL+folder+weatherFolder+forecastWeather+id+calgaryID+and+apiKey+and+mode+and+unitMetic;
-  URLCurrentRedDeer = baseURL+folder+weatherFolder+currentWeather+id+redDeerID+and+apiKey+and+mode+and+unitMetic;
-  URLForecastRedDeer = baseURL+folder+weatherFolder+forecastWeather+id+redDeerID+and+apiKey+and+mode+and+unitMetic;
-  //
-  //Progress of Concatenation & Verification
-  //println("Current Alberta", URLCurrentAlberta);
-  println("Forecast Alberta", URLForecastAlberta);
-  //println("Current Edmonton", URLCurrentEdmonton);
-  //println("Forecast Edmonton", URLForecastEdmonton);
-  //println("Current Calgary", URLCurrentCalgary);
-  //println("Forecast Calgary", URLForecastCalgary);
-  //println("Current RedDeer", URLCurrentRedDeer);
-  //println("Forecast RedDeer", URLForecastRedDeer);
-  //
+ String baseURL = "http://api.openweathermap.org";
+ String folder = "/";
+ String weatherFolder = "data/2.5/";
+ String currentWeather = "weather?";
+ String forecastWeather = "forecast?";
+ String id = "id=";
+ String TorontoID = "6167865";
+ String VancouverID = "6173331";
+ String LondonID = "1006984";
+ String apiKey = "APPID=975e8a2c975084d504f48927ab655624";
+ String and = "&";
+ String mode = "mode=json";
+ String unitMetic = "units=metric"; //Kelvin, Metric, or Imperial
+ //
+ URLCurrentToronto = baseURL+folder+weatherFolder+currentWeather+id+TorontoID+and+apiKey+and+mode+and+unitMetic;
+ URLForecastToronto = baseURL+folder+weatherFolder+forecastWeather+id+TorontoID+and+apiKey+and+mode+and+unitMetic;
+ URLCurrentVancouver = baseURL+folder+weatherFolder+currentWeather+id+VancouverID+and+apiKey+and+mode+and+unitMetic;
+ URLForecastVancouver = baseURL+folder+weatherFolder+forecastWeather+id+VancouverID+and+apiKey+and+mode+and+unitMetic;
+ URLCurrentLondon = baseURL+folder+weatherFolder+currentWeather+id+LondonID+and+apiKey+and+mode+and+unitMetic;
+ URLForecastLondon = baseURL+folder+weatherFolder+forecastWeather+id+LondonID+and+apiKey+and+mode+and+unitMetic;
+ //
+ //Progress of Concatenation & Verification
+ //println("Current Toronto", URLCurrentToronto);
+  //println("Forecast Toronto", URLForecastToronto);
+  //println("Current Vancouver", URLCurrentVancouver);
+  //println("Forecast Vancouver", URLForecastVancouver);
+  //println("Current London", URLCurrentLondon);
+  //println("Forecast London", URLForecastLondon);
 }//End buildingURL
-//
+
 void APICall() {
-  jsonCurrentAlberta = loadJSONObject(URLCurrentAlberta);
-  jsonForecastAlberta = loadJSONObject(URLForecastAlberta);
-  jsonCurrentEdmonton = loadJSONObject(URLCurrentEdmonton);
-  jsonForecastEdmonton = loadJSONObject(URLForecastEdmonton);
-  jsonCurrentCalgary = loadJSONObject(URLCurrentCalgary);
-  jsonForecastCalgary = loadJSONObject(URLForecastCalgary);
-  jsonCurrentRedDeer = loadJSONObject(URLCurrentRedDeer);
-  jsonForecastRedDeer = loadJSONObject(URLForecastRedDeer);
+  jsonCurrentToronto = loadJSONObject(URLCurrentToronto);
+  jsonForecastToronto = loadJSONObject(URLForecastToronto);
+  jsonCurrentVancouver = loadJSONObject(URLCurrentVancouver);
+  jsonForecastVancouver = loadJSONObject(URLForecastVancouver);
+  jsonCurrentLondon = loadJSONObject(URLCurrentLondon);
+  jsonForecastLondon = loadJSONObject(URLForecastLondon);
   //Verification in Console, copy-paste variable output to Chrome and verifiy data
-  //println("JSON Current Alberta", jsonCurrentAlberta);
-  //println("JSON Forecast Alberta", jsonForecastAlberta); //"might be too big"
+  //println("JSON Current Toronto", jsonCurrentToronto);
+  //println("JSON Forecast Toronto", jsonForecastToronto); //"might be too big"
   //Complete the Rest
 }//End APICall

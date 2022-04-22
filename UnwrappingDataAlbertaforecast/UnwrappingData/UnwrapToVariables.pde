@@ -4,7 +4,7 @@
  CAUTION: must verify JSON Object from Browser Console or JSON Lint (Browser) to
  know the structure of how to unwrap varaibles. Examples are below
 
- Note: use APICall() Variables here, for example jsonCurrentAlberta
+ Note: use APICall() Variables here, for example jsonCurrentToronto
  Caution: variables should be a mix of global and local variables
 
  JSONArray weather = jsonObject-Variable.getJSONArray("weather"); //Unwrapping
@@ -34,32 +34,32 @@
 import java.util.Date; //Date Conversation, UNIX Time Stamp from Jan 1, 1970
 //
 //Global Variables
-String mainWeatherAlberta, descriptionAlberta, iconAlberta, countryAlberta, nameAlberta;
-float tempAlberta, tempMinAlberta, tempMaxAlberta, feelsLike;
-int sunriseAlberta, sunsetAlberta;
+String mainWeatherToronto, descriptionToronto, iconToronto, countryToronto, nameToronto;
+float tempToronto, tempMinToronto, tempMaxToronto, feelsLike;
+int sunriseToronto, sunsetToronto;
 Date apiCurrentDateCall;
 //
 void unwrapToVariables() {
-  //println ("The JSON Alberta Object key:value pairs\n\n", jsonCurrentAlberta); //Verifying how to unwrap JSON Alberta in Console
-  currentAlberta();
+  //println ("The JSON Toronto Object key:value pairs\n\n", jsonCurrentToronto); //Verifying how to unwrap JSON Toronto in Console
+  currentToronto();
   //println ("\n\nList of Variables\n");
-  //println ("The Weather in", nameAlberta, countryAlberta, "at", apiCurrentDateCall, "is...");
+  //println ("The Weather in", nameToronto, countryToronto, "at", apiCurrentDateCall, "is...");
   //Note: the apiCurrentDateCall variable will need some String Functions to isolate the current time
   //  To be used for Night Mode and other time functions (CS 30 Topic)
-  //println (mainWeatherAlberta, "specifically", descriptionAlberta);
-  //println ("With this image", iconAlberta);
-  //println ("The current temperature is", tempAlberta);
-  //println ("With a high of", tempMaxAlberta);
-  //println ("And a low of", tempMinAlberta);
+  //println (mainWeatherToronto, "specifically", descriptionToronto);
+  //println ("With this image", iconToronto);
+  //println ("The current temperature is", tempToronto);
+  //println ("With a high of", tempMaxToronto);
+  //println ("And a low of", tempMinToronto);
   //println("This feels like", feelsLike);
-  //println ("Sunrise is at", humanDate(sunriseAlberta) );
-  //println ("Sunset is at", humanDate(sunsetAlberta) );
+  //println ("Sunrise is at", humanDate(sunriseToronto) );
+  //println ("Sunset is at", humanDate(sunsetToronto) );
   //
   //currentEdmonton();
   //currentCalgary();
   //currentRedDeer();
   //
-  forecastAlberta();
+  forecastToronto();
   //
   //forecastEdmonton();
   //forecastCalgary();
@@ -72,34 +72,34 @@ Date humanDate(long unixTime) {
   return dateHuman;
 }
 //
-void currentAlberta() {
+void currentToronto() {
   //
   //Object Unwrapping
-  JSONObject mainAlberta = jsonCurrentAlberta.getJSONObject("main"); //Unwrap {}
-  tempAlberta = mainAlberta.getFloat("temp");
-  tempMinAlberta = mainAlberta.getFloat("temp_min");
-  tempMaxAlberta = mainAlberta.getFloat("temp_max");
-  feelsLike = mainAlberta.getFloat("feels_like");
+  JSONObject mainToronto = jsonCurrentToronto.getJSONObject("main"); //Unwrap {}
+  tempToronto = mainToronto.getFloat("temp");
+  tempMinToronto = mainToronto.getFloat("temp_min");
+  tempMaxToronto = mainToronto.getFloat("temp_max");
+  feelsLike = mainToronto.getFloat("feels_like");
   //
   //Array List Unwrapping (Array with Object)
-  JSONArray weatherAlberta = jsonCurrentAlberta.getJSONArray("weather"); //Unwrapping
-  JSONObject allAlberta = weatherAlberta.getJSONObject(0); //Unwrap {}
-  mainWeatherAlberta = allAlberta.getString("main");
-  descriptionAlberta = allAlberta.getString("description");
-  iconAlberta = allAlberta.getString("icon");
+  JSONArray weatherToronto = jsonCurrentToronto.getJSONArray("weather"); //Unwrapping
+  JSONObject allToronto = weatherToronto.getJSONObject(0); //Unwrap {}
+  mainWeatherToronto = allToronto.getString("main");
+  descriptionToronto = allToronto.getString("description");
+  iconToronto = allToronto.getString("icon");
   //
   //Access Time of Call, UNIX Time Stamp, January 1, 1970
-  long apiCallTimeAlberta = jsonCurrentAlberta.getInt("dt"); //int not enough memory, needs long (i.e. float & double)
-  apiCurrentDateCall = humanDate(apiCallTimeAlberta);
+  long apiCallTimeToronto = jsonCurrentToronto.getInt("dt"); //int not enough memory, needs long (i.e. float & double)
+  apiCurrentDateCall = humanDate(apiCallTimeToronto);
   //
-  JSONObject sysAlberta = jsonCurrentAlberta.getJSONObject("sys"); //Unwrap {}
-  countryAlberta = sysAlberta.getString("country");
-  sunriseAlberta = sysAlberta.getInt("sunrise");
-  sunsetAlberta = sysAlberta.getInt("sunset");
+  JSONObject sysToronto = jsonCurrentToronto.getJSONObject("sys"); //Unwrap {}
+  countryToronto = sysToronto.getString("country");
+  sunriseToronto = sysToronto.getInt("sunrise");
+  sunsetToronto = sysToronto.getInt("sunset");
   //
-  nameAlberta = jsonCurrentAlberta.getString("name");
+  nameToronto = jsonCurrentToronto.getString("name");
   //
-}//End currentAlberta
+}//End currentToronto
 //
 void currentEdmonton() {
 }//End currentEdmonton
@@ -110,13 +110,13 @@ void currentCalgary() {
 void currentRedDeer() {
 }//End currentRedDeer
 //
-void forecastAlberta() {
+void forecastToronto() {
   //Array List Unwrapping (Array with Object)
-  JSONArray weatherAlberta = jsonForecastAlberta.getJSONArray("list"); //Unwrapping
+  JSONArray weatherToronto = jsonForecastToronto.getJSONArray("list"); //Unwrapping
   //
   //Note: about elements of this LIST, see INTEGERS below validated in next two test lines
-  //JSONObject allAlberta = weatherAlberta.getJSONObject(INTEGER); //Unwrap {}
-  //println(allAlberta);
+  //JSONObject allToronto = weatherToronto.getJSONObject(INTEGER); //Unwrap {}
+  //println(allToronto);
   // "0": 9 hours ahead, then in increments of every three hours for each integer
   // "5": 24 hours ahead, or 1 days
   // "13": 48 hours ahead, or 2 days (+8)
@@ -141,16 +141,16 @@ void forecastAlberta() {
   float[] tempMin = new float [futureElements];
   float[] tempMax = new float [futureElements];
   for (int i=currentTimeInt; i<40; i+=8) {
-    JSONObject allAlberta = weatherAlberta.getJSONObject(i); //Unwrap {}
-    time[j] = allAlberta.getString("dt_txt");
+    JSONObject allToronto = weatherToronto.getJSONObject(i); //Unwrap {}
+    time[j] = allToronto.getString("dt_txt");
     //
-    JSONObject main = allAlberta.getJSONObject("main");
+    JSONObject main = allToronto.getJSONObject("main");
     temp[j] = main.getFloat("temp");
     feelsLike[j] = main.getFloat("feels_like");
     tempMin[j] = main.getFloat("temp_min");
     tempMax[j] = main.getFloat("temp_max");
     //
-    JSONArray weather = allAlberta.getJSONArray("weather");
+    JSONArray weather = allToronto.getJSONArray("weather");
     JSONObject allWeather = weather.getJSONObject(0);
     weatherMain[j] = allWeather.getString("main");
     weatherDescription[j] = allWeather.getString("description");
@@ -164,10 +164,10 @@ void forecastAlberta() {
     j++;
   }
 
-  //mainWeatherAlberta = allAlberta.getString("main");
-  //descriptionAlberta = allAlberta.getString("description");
-  //iconAlberta = allAlberta.getString("icon");
-}//End forecastAlberta
+  //mainWeatherToronto = allToronto.getString("main");
+  //descriptionToronto = allToronto.getString("description");
+  //iconToronto = allToronto.getString("icon");
+}//End forecastToronto
 //
 void forecastEdmonton() {
 }//End forecastEdmonton

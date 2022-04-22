@@ -23,7 +23,7 @@ void buildingURL() {
  String TorontoID = "6167865";
  String VancouverID = "6173331";
  String LondonID = "1006984";
- String apiKey = "APPID=9f7b8108e7aa1be51da4d0de6d012171";
+ String apiKey = "APPID=975e8a2c975084d504f48927ab655624";
  String and = "&";
  String mode = "mode=json";
  String unitMetic = "units=metric"; //Kelvin, Metric, or Imperial
