@@ -1,5 +1,5 @@
 /* Automatic Updates here are not done yet
-Only Alberta API Call will populate the current image
+Only Toronto API Call will populate the current image
 */
 //
 //Global Variables
